@@ -1,4 +1,9 @@
 #!/bin/bash
+# Enable all CPU cores
+for c in /sys/devices/system/cpu/cpu*/online; do
+	echo 1 > "$c"
+done
+
 echo "About to unpause processes"
 stopped=`cat /home/mousa/Kludges/sleep/stopped.txt`
 

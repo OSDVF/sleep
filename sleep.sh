@@ -54,3 +54,10 @@ done
 
 echo "$prev" > /home/mousa/Kludges/sleep/prev_c.txt
 echo "$prev_p" > /home/mousa/Kludges/sleep/prev_p.txt
+
+# Disable all CPU cores except for 0
+for c in /sys/devices/system/cpu/cpu*/online; do
+    if [ "$c" != "/sys/devices/system/cpu/cpu0/online" ]; then
+        echo 0 > "$c"
+    fi
+done
