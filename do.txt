@@ -1,0 +1,7 @@
+clamd
+gnome-shell
+code
+inkscape
+vlc
+firefox
+chromium

@@ -1,0 +1,6 @@
+mutter
+Xwayland
+Xorg
+systemd
+gsd
+session
